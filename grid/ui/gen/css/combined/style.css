@@ -67,6 +67,10 @@ h6 {
 */
 
 /*
+		overwrite the $page-width
+*/
+
+/*
 		Mobile first. So we have default classes for mobile
 
 */
@@ -107,6 +111,8 @@ h6 {
 /* Some extra styling */
 
 .container {
+	margin: 0 auto;
+	max-width: 100%;
 	padding: 0 5px;
 }
 

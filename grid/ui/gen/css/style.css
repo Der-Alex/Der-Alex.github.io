@@ -45,6 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 		Default is 12 columns via $column-count
 */
 /*
+		overwrite the $page-width
+*/
+/*
 		Mobile first. So we have default classes for mobile
 
 */
@@ -163,6 +166,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Some extra styling */
 .container {
+  margin: 0 auto;
+  max-width: 100%;
   padding: 0 5px; }
   .container .row {
     margin: 0 -5px;
