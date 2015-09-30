@@ -124,9 +124,9 @@ h6 {
 .container .row > [class*="col-"],
 .container .row > .full,
 .container .row > .half,
-.container .row > [class*=".one-"],
-.container .row > [class*=".two-"],
-.container .row > [class*=".three-"] {
+.container .row > [class*="one-"],
+.container .row > [class*="two-"],
+.container .row > [class*="three-"] {
 	display: block;
 	float: left;
 	margin: 0;
@@ -137,9 +137,9 @@ h6 {
 .container .row > [class*="col-"] > span,
 .container .row > .full > span,
 .container .row > .half > span,
-.container .row > [class*=".one-"] > span,
-.container .row > [class*=".two-"] > span,
-.container .row > [class*=".three-"] > span {
+.container .row > [class*="one-"] > span,
+.container .row > [class*="two-"] > span,
+.container .row > [class*="three-"] > span {
 	background: #d64541;
 	color: #fcfcfc;
 	display: block;
@@ -151,9 +151,9 @@ h6 {
 .container .row > [class*="col-"] > .row,
 .container .row > .full > .row,
 .container .row > .half > .row,
-.container .row > [class*=".one-"] > .row,
-.container .row > [class*=".two-"] > .row,
-.container .row > [class*=".three-"] > .row {
+.container .row > [class*="one-"] > .row,
+.container .row > [class*="two-"] > .row,
+.container .row > [class*="three-"] > .row {
 	margin: 0;
 	padding: 5px;
 	background: #555;
