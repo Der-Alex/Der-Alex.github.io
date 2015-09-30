@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'_ui/gen/css/style.css': '_ui/sass/*.scss'
+					'ui/gen/css/style.css': 'ui/sass/*.scss'
 				}
 			}
 		},
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 			},
 			your_target: {
 				files: {
-					'_ui/gen/css/combined': ['_ui/gen/css/style.css']
+					'ui/gen/css/combined': ['ui/gen/css/style.css']
 				}
 			}
 		},
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			target: {
 				files: {
-					'_ui/gen/css/style.min.css': ['_ui/gen/css/combined/*.css']
+					'ui/gen/css/style.min.css': ['ui/gen/css/combined/*.css']
 				}
 			}
 		},
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 			// Watches all Sass or Scss files recursive within the sass folder
-			files: ['_ui/sass/**/*.scss'],
+			files: ['ui/sass/**/*.scss'],
 			// runs the task `sass` and cssmin whenever any watched file changes
 			tasks: ['sass', 'cmq', 'cssmin:target']
 			}
