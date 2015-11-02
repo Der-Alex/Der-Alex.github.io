@@ -1,5 +1,5 @@
 /* clearfix placeholder selector*/
-%clr {
+@mixin clr() {
 	&:before,
 	&:after {
 		content:"";

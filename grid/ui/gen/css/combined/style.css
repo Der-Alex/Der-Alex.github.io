@@ -10,22 +10,6 @@
 
 /* clearfix placeholder selector*/
 
-.container .row:before,
-.container .row:after {
-	content: "";
-	display: table;
-}
-
-.container .row:after {
-	clear: both;
-}
-
-.container .row > [class*="col-"] > span,
-.container .row > .full > span,
-.container .row > .half > span {
-	font: 0.8333333333em Arial, sans-serif;
-}
-
 /* Media query */
 
 /* configure what you want to load from the base folder */
@@ -108,7 +92,9 @@ h6 {
 		Let's loop for a large device grid based on a variable column count
 */
 
-/* Some extra styling */
+/*
+		Some extra styling
+*/
 
 .container {
 	margin: 0 auto;
@@ -121,12 +107,12 @@ h6 {
 	overflow: hidden;
 }
 
-.container .row > [class*="col-"],
+.container .row > [class|="col"],
+.container .row > [class|="one"],
+.container .row > [class|="two"],
+.container .row > [class|="three"],
 .container .row > .full,
-.container .row > .half,
-.container .row > [class*="one-"],
-.container .row > [class*="two-"],
-.container .row > [class*="three-"] {
+.container .row > .half {
 	display: block;
 	float: left;
 	margin: 0;
@@ -134,26 +120,27 @@ h6 {
 	padding: 5px;
 }
 
-.container .row > [class*="col-"] > span,
+.container .row > [class|="col"] > span,
+.container .row > [class|="one"] > span,
+.container .row > [class|="two"] > span,
+.container .row > [class|="three"] > span,
 .container .row > .full > span,
-.container .row > .half > span,
-.container .row > [class*="one-"] > span,
-.container .row > [class*="two-"] > span,
-.container .row > [class*="three-"] > span {
+.container .row > .half > span {
 	background: #d64541;
 	color: #fcfcfc;
 	display: block;
+	font: 0.8333333333em Arial, sans-serif;
 	min-height: 60px;
 	padding: 5px;
 	text-align: center;
 }
 
-.container .row > [class*="col-"] > .row,
+.container .row > [class|="col"] > .row,
+.container .row > [class|="one"] > .row,
+.container .row > [class|="two"] > .row,
+.container .row > [class|="three"] > .row,
 .container .row > .full > .row,
-.container .row > .half > .row,
-.container .row > [class*="one-"] > .row,
-.container .row > [class*="two-"] > .row,
-.container .row > [class*="three-"] > .row {
+.container .row > .half > .row {
 	margin: 0;
 	padding: 5px;
 	background: #555;
@@ -168,23 +155,33 @@ h6 {
 	background: #049372;
 }
 
-.container .row.no-gap > [class*="col-"],
+.container .row.no-gap > [class|="col"],
+.container .row.no-gap > [class|="one"],
+.container .row.no-gap > [class|="two"],
+.container .row.no-gap > [class|="three"],
 .container .row.no-gap > .full,
-.container .row.no-gap > .half,
-.container .row.no-gap > [class*="one-"],
-.container .row.no-gap > [class*="two-"],
-.container .row.no-gap > [class*="three-"] {
+.container .row.no-gap > .half {
 	padding: 0;
 }
 
-.container .row.no-gap > [class*="col-"] > .row,
+.container .row.no-gap > [class|="col"] > .row,
+.container .row.no-gap > [class|="one"] > .row,
+.container .row.no-gap > [class|="two"] > .row,
+.container .row.no-gap > [class|="three"] > .row,
 .container .row.no-gap > .full > .row,
-.container .row.no-gap > .half > .row,
-.container .row.no-gap > [class*="one-"] > .row,
-.container .row.no-gap > [class*="two-"] > .row,
-.container .row.no-gap > [class*="three-"] > .row {
+.container .row.no-gap > .half > .row {
 	background: inherit;
 	padding: 0;
+}
+
+.container .row:before,
+.container .row:after {
+	content: "";
+	display: table;
+}
+
+.container .row:after {
+	clear: both;
 }
 
 /*# sourceMappingURL=style.css.map */
