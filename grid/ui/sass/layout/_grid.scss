@@ -132,6 +132,23 @@
 			}
 		}
 
+		&.no-gap {
+
+			> [class*="col-"],
+			> .full,
+			> .half,
+			> [class*="one-"],
+			> [class*="two-"],
+			> [class*="three-"] {
+				padding: 0;
+
+				> .row {
+					background: inherit;
+					padding: 0;
+				}
+			}
+		}
+
 		@extend %clr;
 	}
 }

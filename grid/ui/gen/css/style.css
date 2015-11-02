@@ -209,5 +209,20 @@ h1, h2, h3, h4, h5, h6 {
       height: inherit; }
     .container .row .secondary-color > span {
       background: #049372; }
+    .container .row.no-gap > [class*="col-"],
+    .container .row.no-gap > .full,
+    .container .row.no-gap > .half,
+    .container .row.no-gap > [class*="one-"],
+    .container .row.no-gap > [class*="two-"],
+    .container .row.no-gap > [class*="three-"] {
+      padding: 0; }
+      .container .row.no-gap > [class*="col-"] > .row,
+      .container .row.no-gap > .full > .row,
+      .container .row.no-gap > .half > .row,
+      .container .row.no-gap > [class*="one-"] > .row,
+      .container .row.no-gap > [class*="two-"] > .row,
+      .container .row.no-gap > [class*="three-"] > .row {
+        background: inherit;
+        padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
