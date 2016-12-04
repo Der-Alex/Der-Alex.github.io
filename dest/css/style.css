@@ -1,0 +1,180 @@
+/*
+  Responsive SASS Grid.
+*/
+/*
+  This is how the grid works:
+  Loop through the columns and create .col-n-of-m classes
+  that define the column width.
+  push-n and pull-n define the push and pull behaviour of a column.
+  Default is 12 columns via $column-count.
+*/
+/*
+  The grid needs some default variables.
+  These are:
+  - $column-count: the amount of columns, default 12.
+  - $page-width: the maximum width of the page, default 80rem (1280px)
+*/
+/*
+  The grid rows need a clearfix.
+  So we use a clearfix placeholder selector, because this is a good place to use one!
+*/
+.row:before, .row:after {
+  content: "";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+/*
+  The grid is mobile first. So we need some media queries for medium and big sized layouts.
+*/
+/*
+  The grid itself. It is mobile first.
+  I think that the most common sizes for small devices are:
+  - full
+  - half
+  - third
+  - quarter
+  I am sure, there don't have to be more column types for mobile.
+*/
+.full {
+  width: 100%; }
+
+.half {
+  width: 50%; }
+
+.one-third {
+  width: 33.3333333333%; }
+
+.two-third {
+  width: 66.6666666667%; }
+
+.one-quarter {
+  width: 25%; }
+
+.three-quarter {
+  width: 75%; }
+
+/*
+  For medium sized devices we will have a prefix m-.
+  Maybe i'll add fifths here...
+*/
+@media (min-width: 48rem) {
+  .m-full {
+    width: 100%; }
+  .m-half {
+    width: 50%; }
+  .m-one-third {
+    width: 33.3333333333%; }
+  .m-two-third {
+    width: 66.6666666667%; }
+  .m-one-quarter {
+    width: 25%; }
+  .m-three-quarter {
+    width: 75%; } }
+
+/*
+  For large layouts we use the .col-n-of-m classes.
+  Let's loop from 1 to the value of column-count (def: 12).
+  For every class we create a percentage based width.
+  Also we create the push-n and pull-n classes.
+*/
+@media (min-width: 64rem) {
+  .col-1-of-12 {
+    width: 8.3333333333%; }
+  .push-1 {
+    left: 8.3333333333%; }
+  .pull-1 {
+    right: 8.3333333333%; }
+  .col-2-of-12 {
+    width: 16.6666666667%; }
+  .push-2 {
+    left: 16.6666666667%; }
+  .pull-2 {
+    right: 16.6666666667%; }
+  .col-3-of-12 {
+    width: 25%; }
+  .push-3 {
+    left: 25%; }
+  .pull-3 {
+    right: 25%; }
+  .col-4-of-12 {
+    width: 33.3333333333%; }
+  .push-4 {
+    left: 33.3333333333%; }
+  .pull-4 {
+    right: 33.3333333333%; }
+  .col-5-of-12 {
+    width: 41.6666666667%; }
+  .push-5 {
+    left: 41.6666666667%; }
+  .pull-5 {
+    right: 41.6666666667%; }
+  .col-6-of-12 {
+    width: 50%; }
+  .push-6 {
+    left: 50%; }
+  .pull-6 {
+    right: 50%; }
+  .col-7-of-12 {
+    width: 58.3333333333%; }
+  .push-7 {
+    left: 58.3333333333%; }
+  .pull-7 {
+    right: 58.3333333333%; }
+  .col-8-of-12 {
+    width: 66.6666666667%; }
+  .push-8 {
+    left: 66.6666666667%; }
+  .pull-8 {
+    right: 66.6666666667%; }
+  .col-9-of-12 {
+    width: 75%; }
+  .push-9 {
+    left: 75%; }
+  .pull-9 {
+    right: 75%; }
+  .col-10-of-12 {
+    width: 83.3333333333%; }
+  .push-10 {
+    left: 83.3333333333%; }
+  .pull-10 {
+    right: 83.3333333333%; }
+  .col-11-of-12 {
+    width: 91.6666666667%; }
+  .push-11 {
+    left: 91.6666666667%; }
+  .pull-11 {
+    right: 91.6666666667%; }
+  .col-12-of-12 {
+    width: 100%; }
+  .push-12 {
+    left: 100%; }
+  .pull-12 {
+    right: 100%; }
+  [class*="push"], [class*="pull"] {
+    position: relative; } }
+
+/*
+  When you have a container with default padding
+  you could use a negative margin for the rows
+  margin: 0 ($gap * -1);
+*/
+.row {
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  /*
+    Rows don't have to be used without columns!
+    So here we define every direct child of .row and it's behaviour
+  */
+  /*
+    Last but not least we extend our .row class with the clearfix.
+  */ }
+  .row > * {
+    box-sizing: inherit;
+    display: block;
+    float: left;
+    margin: 0; }
+
+/*# sourceMappingURL=style.css.map */
